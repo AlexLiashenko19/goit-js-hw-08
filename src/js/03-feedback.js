@@ -2,7 +2,7 @@ import throttle from 'lodash.throttle';
 
 const LOCAL_KEY = 'feedback-form-state';
 
-form = document.querySelector('.feedback-form');
+const form = document.querySelector('.feedback-form');
 
 form.addEventListener('input', throttle(onInputData, 500));
 form.addEventListener('submit', onFormSubmit);
@@ -18,8 +18,8 @@ function onInputData(e) {
 
 function reloadPage() {
   if (dataForm) {
-    email.value = dataForm.email || "Enter a name";
-    message.value = dataForm.message || "Enter a message";
+    email.value = dataForm.email || "Mykola";
+    message.value = dataForm.message || "We are proud you're patient";
   }
 }
 
